@@ -16,7 +16,7 @@ RUN git clone https://github.com/Samsung/rlottie.git && (cd rlottie && cmake CMa
 
 WORKDIR /application
 ADD conanfile.txt .
-RUN conan install .
+RUN conan install . --build=missing
 
 ADD CMakeLists.txt .
 ADD zstr ./zstr
